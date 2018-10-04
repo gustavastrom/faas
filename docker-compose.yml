@@ -1,0 +1,42 @@
+version: "3.0"
+
+services:
+  faas-gateway:
+    build:
+      context: ./faas-gateway
+      dockerfile: Dockerfile
+    ports:
+      - "80:80"
+    volumes:
+      - /var/run/docker.sock:/var/run/docker.sock
+      - ./faas-gateway:/go/src/faas/faas-gateway
+    working_dir: /go/src/faas/faas-gateway/cmd/gatewayd
+    command: go run gatewayd.go
+
+  factorial:
+    build:
+      context: ./factorial
+      dockerfile: Dockerfile
+    labels:
+      - "faas.name=factorial"
+      - "faas.port=8080"
+    volumes:
+      - ./factorial:/go/src/faas/factorial
+    working_dir: /go/src/faas/factorial/cmd/factoriald
+    command: go run factoriald.go
+    depends_on:
+      - faas-gateway
+
+  ping:
+    build:
+      context: ./ping
+      dockerfile: Dockerfile
+    labels:
+    - "faas.name=ping"
+    - "faas.port=8080"
+    volumes:
+    - ./ping:/go/src/faas/ping
+    working_dir: /go/src/faas/ping/cmd/pingd
+    command: go run pingd.go
+    depends_on:
+    - faas-gateway
