@@ -29,7 +29,12 @@ func dynamicGateway(w http.ResponseWriter, r *http.Request) {
 
 	_, nameExists := pathToName[r.URL.Path]
 	if !nameExists {
-		fmt.Fprintf(w, "Error: The function " + path + " doesn't exist")
+		fmt.Fprintf(w, "Error: The function " + path + " doesn't exist. Available functions: \n\n")
+		for k, v := range pathToName {
+			if k != "/faas/" {
+				fmt.Fprint(w, v + ": " + k + "?p=<value>\n")
+			}
+		}
 		return
 	}
 
