@@ -1,7 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="5eeb4511-12b2-44dc-a900-08dea983c3e2" name="Default Changelist" comment="" />
+    <list default="true" id="5eeb4511-12b2-44dc-a900-08dea983c3e2" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docker-compose.yml" beforeDir="false" afterPath="$PROJECT_DIR$/docker-compose.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/faas-gateway/cmd/gatewayd/gatewayd.go" beforeDir="false" afterPath="$PROJECT_DIR$/faas-gateway/cmd/gatewayd/gatewayd.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/faas-gateway/vendor/vendor.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/factorial/cmd/factoriald/factoriald.go" beforeDir="false" afterPath="$PROJECT_DIR$/factorial/cmd/factoriald/factoriald.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ping/cmd/pingd/pingd.go" beforeDir="false" afterPath="$PROJECT_DIR$/ping/cmd/pingd/pingd.go" afterDir="false" />
+    </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -12,15 +19,18 @@
     <session id="751189154">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.closed" value="1" />
+          <entry key="project.closed" value="5" />
+          <entry key="project.open.time.10" value="1" />
+          <entry key="project.open.time.11" value="2" />
+          <entry key="project.open.time.15" value="1" />
           <entry key="project.open.time.4" value="1" />
           <entry key="project.open.time.8" value="1" />
-          <entry key="project.opened" value="2" />
+          <entry key="project.opened" value="6" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
         <counts>
-          <entry key="Dockerfile" value="3" />
+          <entry key="Dockerfile" value="4" />
           <entry key="go" value="3" />
           <entry key="json" value="1" />
           <entry key="yml" value="2" />
@@ -30,22 +40,22 @@
         <counts>
           <entry key="Go" value="3" />
           <entry key="JSON" value="1" />
-          <entry key="PLAIN_TEXT" value="3" />
+          <entry key="PLAIN_TEXT" value="4" />
           <entry key="YAML" value="2" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
           <entry key="Dockerfile" value="22" />
-          <entry key="go" value="856" />
-          <entry key="yml" value="261" />
+          <entry key="go" value="1917" />
+          <entry key="yml" value="273" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="Go" value="856" />
+          <entry key="Go" value="1917" />
           <entry key="PLAIN_TEXT" value="22" />
-          <entry key="YAML" value="261" />
+          <entry key="YAML" value="273" />
         </counts>
       </usages-collector>
     </session>
@@ -55,10 +65,10 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/faas-gateway/cmd/gatewayd/gatewayd.go">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="576">
-              <caret line="32" column="51" lean-forward="true" selection-start-line="32" selection-start-column="51" selection-end-line="32" selection-end-column="51" />
+            <state relative-caret-position="990">
+              <caret line="55" column="40" selection-start-line="55" selection-start-column="40" selection-end-line="55" selection-end-column="40" />
               <folding>
-                <element signature="e#14#43#0" expanded="true" />
+                <element signature="e#14#140#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -76,11 +86,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/ping/cmd/pingd/pingd.go">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="306">
-              <caret line="17" column="36" lean-forward="true" selection-start-line="17" selection-start-column="36" selection-end-line="17" selection-end-column="36" />
-              <folding>
-                <element signature="e#14#54#0" expanded="true" />
-              </folding>
+            <state relative-caret-position="378">
+              <caret line="25" column="1" lean-forward="true" selection-start-line="25" selection-start-column="1" selection-end-line="25" selection-end-column="1" />
             </state>
           </provider>
         </entry>
@@ -88,11 +95,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/factorial/cmd/factoriald/factoriald.go">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="324">
-              <caret line="18" column="26" selection-start-line="18" selection-start-column="26" selection-end-line="18" selection-end-column="26" />
-              <folding>
-                <element signature="e#14#43#0" expanded="true" />
-              </folding>
+            <state relative-caret-position="450">
+              <caret line="29" column="15" lean-forward="true" selection-start-line="29" selection-start-column="15" selection-end-line="29" selection-end-column="15" />
             </state>
           </provider>
         </entry>
@@ -100,8 +104,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/factorial/Dockerfile">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="522">
-              <caret line="29" column="49" selection-end-line="29" selection-end-column="49" />
+            <state relative-caret-position="180">
+              <caret line="10" selection-start-line="10" selection-end-line="10" />
             </state>
           </provider>
         </entry>
@@ -118,8 +122,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/docker-compose.yml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="738">
-              <caret line="41" column="18" selection-start-line="41" selection-start-column="18" selection-end-line="41" selection-end-column="18" />
+            <state relative-caret-position="792">
+              <caret line="44" column="10" selection-start-line="44" selection-start-column="10" selection-end-line="44" selection-end-column="10" />
             </state>
           </provider>
         </entry>
@@ -134,15 +138,18 @@
     </option>
   </component>
   <component name="GOROOT" path="/usr/local/go" />
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
         <option value="$PROJECT_DIR$/faas-gateway/Dockerfile" />
         <option value="$PROJECT_DIR$/factorial/Dockerfile" />
         <option value="$PROJECT_DIR$/ping/Dockerfile" />
-        <option value="$PROJECT_DIR$/factorial/cmd/factoriald/factoriald.go" />
         <option value="$PROJECT_DIR$/docker-compose.yml" />
         <option value="$PROJECT_DIR$/ping/cmd/pingd/pingd.go" />
+        <option value="$PROJECT_DIR$/factorial/cmd/factoriald/factoriald.go" />
         <option value="$PROJECT_DIR$/faas-gateway/cmd/gatewayd/gatewayd.go" />
       </list>
     </option>
@@ -154,10 +161,12 @@
     <sorting>DEFINITION_ORDER</sorting>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="y" value="33" />
-    <option name="width" value="2560" />
-    <option name="height" value="1407" />
+    <option name="x" value="-203" />
+    <option name="y" value="34" />
+    <option name="width" value="2550" />
+    <option name="height" value="1054" />
   </component>
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
     <navigator proportions="" version="1">
       <foldersAlwaysOnTop value="true" />
@@ -174,49 +183,25 @@
             <path>
               <item name="faas" type="b2602c69:ProjectViewProjectNode" />
               <item name="faas" type="462c0819:PsiDirectoryNode" />
-              <item name="faas-gateway" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="faas" type="b2602c69:ProjectViewProjectNode" />
-              <item name="faas" type="462c0819:PsiDirectoryNode" />
-              <item name="faas-gateway" type="462c0819:PsiDirectoryNode" />
-              <item name="cmd" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="faas" type="b2602c69:ProjectViewProjectNode" />
-              <item name="faas" type="462c0819:PsiDirectoryNode" />
-              <item name="faas-gateway" type="462c0819:PsiDirectoryNode" />
-              <item name="cmd" type="462c0819:PsiDirectoryNode" />
-              <item name="gatewayd" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="faas" type="b2602c69:ProjectViewProjectNode" />
-              <item name="faas" type="462c0819:PsiDirectoryNode" />
               <item name="factorial" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="faas" type="b2602c69:ProjectViewProjectNode" />
               <item name="faas" type="462c0819:PsiDirectoryNode" />
-              <item name="factorial" type="462c0819:PsiDirectoryNode" />
+              <item name="factorial2" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="faas" type="b2602c69:ProjectViewProjectNode" />
+              <item name="faas" type="462c0819:PsiDirectoryNode" />
+              <item name="factorial2" type="462c0819:PsiDirectoryNode" />
               <item name="cmd" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="faas" type="b2602c69:ProjectViewProjectNode" />
               <item name="faas" type="462c0819:PsiDirectoryNode" />
-              <item name="factorial" type="462c0819:PsiDirectoryNode" />
+              <item name="factorial2" type="462c0819:PsiDirectoryNode" />
               <item name="cmd" type="462c0819:PsiDirectoryNode" />
               <item name="factoriald" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="faas" type="b2602c69:ProjectViewProjectNode" />
-              <item name="faas" type="462c0819:PsiDirectoryNode" />
-              <item name="ping" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="faas" type="b2602c69:ProjectViewProjectNode" />
-              <item name="faas" type="462c0819:PsiDirectoryNode" />
-              <item name="ping" type="462c0819:PsiDirectoryNode" />
-              <item name="cmd" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -245,10 +230,10 @@
     </option>
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="33" width="2560" height="1407" extended-state="6" />
+    <frame x="0" y="34" width="2560" height="1406" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.10671463" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.09352518" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -275,16 +260,28 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/faas-gateway/vendor/vendor.json">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
+    <entry file="file://$PROJECT_DIR$/faas-gateway/vendor/vendor.json" />
     <entry file="file://$PROJECT_DIR$/faas-gateway/cmd/gatewayd/.fsw.yml">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/factorial/Dockerfile">
+    <entry file="file://$PROJECT_DIR$/factorial2/Dockerfile">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="216">
+          <caret line="12" column="13" lean-forward="true" selection-start-line="12" selection-start-column="13" selection-end-line="12" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ping/Dockerfile">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="522">
-          <caret line="29" column="49" selection-end-line="29" selection-end-column="49" />
+          <caret line="29" column="49" selection-start-line="29" selection-start-column="49" selection-end-line="29" selection-end-column="49" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/factorial/Dockerfile">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="180">
+          <caret line="10" selection-start-line="10" selection-end-line="10" />
         </state>
       </provider>
     </entry>
@@ -297,44 +294,31 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/docker-compose.yml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="738">
-          <caret line="41" column="18" selection-start-line="41" selection-start-column="18" selection-end-line="41" selection-end-column="18" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/factorial/cmd/factoriald/factoriald.go">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="324">
-          <caret line="18" column="26" selection-start-line="18" selection-start-column="26" selection-end-line="18" selection-end-column="26" />
-          <folding>
-            <element signature="e#14#43#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ping/Dockerfile">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="522">
-          <caret line="29" column="49" selection-start-line="29" selection-start-column="49" selection-end-line="29" selection-end-column="49" />
+        <state relative-caret-position="792">
+          <caret line="44" column="10" selection-start-line="44" selection-start-column="10" selection-end-line="44" selection-end-column="10" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/ping/cmd/pingd/pingd.go">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="306">
-          <caret line="17" column="36" lean-forward="true" selection-start-line="17" selection-start-column="36" selection-end-line="17" selection-end-column="36" />
-          <folding>
-            <element signature="e#14#54#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="378">
+          <caret line="25" column="1" lean-forward="true" selection-start-line="25" selection-start-column="1" selection-end-line="25" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/factorial/cmd/factoriald/factoriald.go">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="450">
+          <caret line="29" column="15" lean-forward="true" selection-start-line="29" selection-start-column="15" selection-end-line="29" selection-end-column="15" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/faas-gateway/cmd/gatewayd/gatewayd.go">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="576">
-          <caret line="32" column="51" lean-forward="true" selection-start-line="32" selection-start-column="51" selection-end-line="32" selection-end-column="51" />
+        <state relative-caret-position="990">
+          <caret line="55" column="40" selection-start-line="55" selection-start-column="40" selection-end-line="55" selection-end-column="40" />
           <folding>
-            <element signature="e#14#43#0" expanded="true" />
+            <element signature="e#14#140#0" expanded="true" />
           </folding>
         </state>
       </provider>

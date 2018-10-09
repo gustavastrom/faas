@@ -1,47 +1,49 @@
 package main
 
 import (
+	"context"
 	"fmt"
+	"github.com/docker/docker/api/types"
+	"github.com/docker/docker/client"
 	"io/ioutil"
 	"net/http"
 )
 
-func info(w http.ResponseWriter, r *http.Request){
-	fmt.Fprintf(w, "Available services: /factorial?n=<int>, /ping?u=<URL>")
-}
-
-func factorial(w http.ResponseWriter, r *http.Request){
-	value, ok := r.URL.Query()["n"]
-	if !ok || len(value[0]) < 1 {
-		fmt.Fprintf(w, "Error: param n is missing")
-		return
-	}
-
-	n := value[0]
-
-	resp, err := http.Get("http://factorial?n=" + n)
+func dynamicGateway(w http.ResponseWriter, r *http.Request) {
+	cli, err := client.NewClientWithOpts(client.WithVersion("1.38"))
 	if err != nil {
-		fmt.Fprintf(w, "Error: Can't establish connection to factorial service")
-		return
+		panic(err)
 	}
 
-	defer resp.Body.Close()
-	body, err := ioutil.ReadAll(resp.Body)
-	fmt.Fprintf(w, string(body))
-}
-
-func ping(w http.ResponseWriter, r *http.Request) {
-	value, ok := r.URL.Query()["u"]
-	if !ok || len(value[0]) < 1 {
-		fmt.Fprintf(w, "Error: param u is missing")
-		return
-	}
-
-	u := value[0]
-
-	resp, err := http.Get("http://ping?u=" + u)
+	containers, err := cli.ContainerList(context.Background(), types.ContainerListOptions{})
 	if err != nil {
-		fmt.Fprintf(w, "Error: Can't establish connection to ping service or " + u)
+		panic(err)
+	}
+
+	path := r.URL.Path
+	pathToName := make(map[string]string)
+	for _, container := range containers {
+		//fmt.Fprint(w, "ID: " + container.ID, " Image: " + container.Image, " Name: " + container.Labels["faas.name"], "\n")
+		pathToName["/faas/" + container.Labels["faas.name"]] = container.Labels["faas.name"]
+	}
+
+	_, nameExists := pathToName[r.URL.Path]
+	if !nameExists {
+		fmt.Fprintf(w, "Error: The function " + path + " doesn't exist")
+		return
+	}
+
+	value, ok := r.URL.Query()["p"]
+	if !ok || len(value[0]) < 1 {
+		fmt.Fprintf(w, "Error: param p is missing")
+		return
+	}
+
+	p := value[0]
+	name := pathToName[path]
+	resp, err := http.Get("http://" + name + "?p=" + p)
+	if err != nil {
+		fmt.Fprintf(w, "Error: Can't establish connection to function " + name)
 		return
 	}
 
@@ -51,10 +53,6 @@ func ping(w http.ResponseWriter, r *http.Request) {
 }
 
 func main() {
-	http.HandleFunc("/lambda", info)
-	http.HandleFunc("/lambda/info", info)
-	http.HandleFunc("/lambda/factorial", factorial)
-	http.HandleFunc("/lambda/ping", ping)
-
+	http.HandleFunc("/", dynamicGateway)
 	http.ListenAndServe(":80", nil)
 }
