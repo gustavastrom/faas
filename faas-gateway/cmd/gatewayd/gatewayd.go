@@ -27,7 +27,7 @@ func dynamicGateway(w http.ResponseWriter, r *http.Request) {
 		pathToName["/faas/" + container.Labels["faas.name"]] = container.Labels["faas.name"]
 	}
 
-	_, nameExists := pathToName[r.URL.Path]
+	_, nameExists := pathToName[path]
 	if !nameExists {
 		fmt.Fprintf(w, "Error: The function " + path + " doesn't exist. Available functions: \n\n")
 		for k, v := range pathToName {
